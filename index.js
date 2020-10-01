@@ -1,5 +1,7 @@
-const inquire = require("inquirer")
+const inquirer = require("inquirer")
 const fs = require("fs")
+const generateMarkdown = require("./generateMarkdown.js")
+const badge = ("https://img.shields.io/github/languages/top/DiaG86/readme-generator")
 
 // array of questions for user
 const questions = [
@@ -11,7 +13,12 @@ const questions = [
       {
         type: "input",
         name: "description",
-        message: "Please enter a description of your projet."
+        message: "Please enter a description of your project."
+      },
+      {
+        type: "input",
+        name: "TableOfContents",
+        message: "Do you require a table of contents? If yes what are the sections of your project?"
       },
       {
         type: "input",
@@ -20,19 +27,19 @@ const questions = [
       },
       {
         type: "input",
-        name: "usage",
-        message: "Instructions for use"
+        name: "Usage",
+        message: "What is the project used for?"
       },
       {
         type: 'checkbox',
-        choices: ['Apache License 2.0', 'GNU LGPLv3', 'GNU AGPLv3', 'MIT License'],
+        choices: ['Apache License 2.0', 'GNU LGPLv3', 'GNU AGPLv3', 'MIT License', 'None'],
         message: 'Which licenses did you use?',
         name: 'license'
       },
       {
         type: "input",
-        name: "email",
-        message: "Enter email address."
+        name: "contribution",
+        message: "Are people allowed to contribute or add to the project?"
       },
       {
         type: "input",
@@ -50,7 +57,7 @@ const questions = [
 // function to write README file
 function writeToFile(fileName, data){
     const template = generateMarkdown(data);
-    fs.writeFileSync(fileName, data, function(err){
+    fs.writeFileSync(fileName, template, function(err){
     if(err)
         console.log(err);
     })
