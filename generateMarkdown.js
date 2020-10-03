@@ -1,13 +1,23 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ## Description
   ${data.description}
-  ## ${data.TableOfContents}
-  ## ${data.Install}
-  ## ${data.Usage}
-  ## ${data.License}
+  ## Table of Contents
+  ${data.TableOfContents}
+  ## Installation
+  ${data.Install}
+  ## Usage
+  ${data.Usage}
+  ## License
+  ${data.License}
+  ## Contributors  
+  ${data.Contribution}
+  ##  Tests
     ${data.Tests}
-    ${data.Questions}
+  ## Questions
+  "Please contact ${data.Questions} with any questions about the app.
+
 
 `;
 }

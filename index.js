@@ -22,24 +22,24 @@ const questions = [
       },
       {
         type: "input",
-        name: "install",
+        name: "Install",
         message: "What is required for installation?"
       },
       {
         type: "input",
         name: "Usage",
-        message: "What is the project used for?"
+        message: "How do you use the project?"
       },
       {
         type: 'checkbox',
         choices: ['Apache License 2.0', 'GNU LGPLv3', 'GNU AGPLv3', 'MIT License', 'None'],
         message: 'Which licenses did you use?',
-        name: 'license'
+        name: 'License'
       },
       {
         type: "input",
-        name: "contribution",
-        message: "Are people allowed to contribute or add to the project?"
+        name: "Contribution",
+        message: "Who contributed to this project?"
       },
       {
         type: "input",
@@ -49,9 +49,10 @@ const questions = [
       {
         type: "input",
         name: "Questions",
-        message: "Who do users contact with questions?"
+        message: "Who do users contact with questions(enter email)?"
       },
 ];
+
 
 
 // function to write README file

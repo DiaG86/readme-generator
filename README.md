@@ -1,9 +1,19 @@
 # Readme Generator
-  A dynammic commandline code that will automatically generator a professional readme based on a series of questions posed to the user.
-  ### undefined
-  ### undefined
-  ### undefined
-  ### undefined
-    ran in terminal to test functionality
-    contact me with any questions (adia.grigsby@gmail.com)
+  ## Description
+  A command line application that creates a dynamic readme based on questions posed to the user.
+  ## Table of Contents
+  no
+  ## Installation
+  node inquire
+  ## Usage
+  npm install inquirer run with node index.js
+  ## License
+  
+  ## Contributors  
+  https://github.com/DiaG86
+  ##  Tests
+    ran in terminal to verify functionality
+  ## Questions
+  "Please contact adia.grigsby@gmail.com with any questions about the app.
+
 
